@@ -1,0 +1,52 @@
+<div class="container">
+	<form action="" name="studentRegister">
+		<div class="form-group">
+			<label for="studentNumber">Number:</label>
+			<input type="number" class="form-control" id="studentNumber" ng-model="student.number">
+		</div>
+		<div class="form-group">
+			<label for="studentEmail">First Name:</label>
+			<input type="text" class="form-control" id="studentEmail" ng-model="student.firstName">
+		</div>
+		<div class="form-group">
+			<label for="studentEmail">Last Name:</label>
+			<input type="text" class="form-control" id="studentEmail" ng-model="student.lastName">
+		</div>
+		<div class="form-group">
+			<label for="studentGender">Select Gender:</label>
+			<select class="form-control" id="studentGender" ng-model="student.gender">
+				<option value="" selected disabled></option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="studentAddress">Address:</label>
+			<input type="text" class="form-control" id="studentAddress" ng-model="student.address">
+		</div>
+		<div class="form-group">
+			<label for="studentPhoneNumber">Phone number:</label>
+			<input type="tel" class="form-control" id="studentPhoneNumber" ng-model="student.phone">
+		</div>
+		<div class="form-group">
+			<label for="studentEmail">Email address:</label>
+			<input type="email" class="form-control" id="studentEmail" ng-model="student.email">
+		</div>
+		<div class="form-group">
+			<label for="studentNotes">Add Notes:</label>
+			<textarea class="form-control" id="studentNotes" rows="3" ng-model="student.notes"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary" ng-click="registerStudent(student)">Save</button>
+	</form>
+</div>
+
+<h2>{{ studentList | json }}</h2>
+
+<div>
+	<ul ng-repeat="x in arr">
+		<li>{{ x }}</li>
+	</ul>
+</div>
+<input type="text" ng-model="sampleData" />
+<p>{{ sampleData }}</p>
+<button ng-click="sendData(sampleData)">CLICK ME</button>
